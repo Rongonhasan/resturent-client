@@ -9,6 +9,7 @@ import dessertImg from '../../../assets/menu/dessert-bg.jpeg'
 import useMenu from '../../../hooks/useMenu';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import MenuCategory from '../MenuCategory/MenuCategory';
+import { useState } from 'react';
 
 const Menu = () => {
 const [menu] = useMenu();
@@ -17,6 +18,28 @@ const [menu] = useMenu();
     const salad = menu.filter(item => item.category === 'salad');
     const pizza = menu.filter(item => item.category === 'pizza');
     const offered = menu.filter(item => item.category === 'offered');
+    const [preload, setPreload] = useState(true);
+
+    setTimeout(function () {
+      setPreload(false);
+    }, 1000);
+  
+    if (preload) {
+      return (
+        <>
+          <div className="preload">
+            <h1>
+              <strong className='flex flex-col items-center justify-center mt-11'>Loading</strong>
+              <i className='flex flex-col items-center justify-center mt-11'> 
+
+<span className="loading loading-dots loading-lg"></span></i>.
+            </h1>
+            <p className='flex flex-col items-center justify-center mt-11'>─────</p>
+        
+          </div>
+        </>
+      );
+    }
     return (
         <div>
              <Helmet>

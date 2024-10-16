@@ -18,7 +18,28 @@ const Testimonials = () => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
+    const [preload, setPreload] = useState(true);
 
+    setTimeout(function () {
+      setPreload(false);
+    }, 1000);
+  
+    if (preload) {
+      return (
+        <>
+          <div className="preload">
+            <h1>
+              <strong className='flex flex-col items-center justify-center mt-11'>Loading</strong>
+              <i className='flex flex-col items-center justify-center mt-11'> 
+
+<span className="loading loading-dots loading-lg"></span></i>.
+            </h1>
+            <p className='flex flex-col items-center justify-center mt-11'>─────</p>
+        
+          </div>
+        </>
+      );
+    }
     return (
         <section className="my-20">
             <SectionTitle
