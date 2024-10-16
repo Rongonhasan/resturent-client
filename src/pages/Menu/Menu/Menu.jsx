@@ -43,7 +43,7 @@ const [menu] = useMenu();
     return (
         <div>
              <Helmet>
-        <title>Bistro boss | Menu</title>
+        <title>Helium | Menu</title>
       </Helmet>
       <Cover img={menuImg} title="our menu"></Cover>
       <SectionTitle subHeading="Don't Miss" heading="Today's Offer"></SectionTitle>

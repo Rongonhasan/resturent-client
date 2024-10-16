@@ -61,7 +61,7 @@ const SignUp = () => {
 
     return (
         <>    <Helmet>
-        <title>Bistro Boss | Sign Up</title>
+        <title>Helium | Sign Up</title>
     </Helmet>
         <div className="hero w-full">
         <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row">

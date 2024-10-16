@@ -56,7 +56,7 @@ const Login = () => {
     return (
     <>
     <Helmet>
-    <title>Bistro Boss | Login</title>
+    <title>Helium | Login</title>
 </Helmet>
 <div className="hero w-full">
   <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row">

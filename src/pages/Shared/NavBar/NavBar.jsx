@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import Logo from "../../../assets/hero/food-logo.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/Authprovider";
 import { FaShoppingCart } from 'react-icons/fa';
@@ -41,20 +42,6 @@ const NavBar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Our Menu</Link></li>
         <li><Link to="/order/salad">Order Food</Link></li>
-        {/* {
-            isAdmin ? <li><Link to="/dashboard/adminhome">Dashboard</Link></li> : 
-            <li><Link to="/dashboard/userhome">Dashboard</Link></li>
-        }
-        <li>
-            <Link to='/dashboard/mycart'>
-            <button className="btn btn-sm  gap-2 ">
-                  <FaShoppingCart></FaShoppingCart>
-        <div className="badge badge-secondary">+{cart?.length || 0}</div>
-                </button>
-
-            </Link>
-        </li> */}
-       
         {
             user ? <> 
             {/* <span>{user?.displayName}</span> */}
@@ -84,7 +71,8 @@ const NavBar = () => {
 
     return (
         <>
-            <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white">
+            <div className="navbar  max-w-screen-xl bg-white  text-black">
+             
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -94,7 +82,9 @@ const NavBar = () => {
                             {navOptions}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Bistro Boss</a>
+                    <a className="btn btn-ghost normal-case text-xl nerko-one-regular">
+                    <img src={Logo} alt="Logo" className="w-10" />
+                      HE L IU M</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
